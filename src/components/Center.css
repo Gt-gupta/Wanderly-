@@ -1,0 +1,164 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.template{
+    background-color: rgb(57, 57, 239);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: .05px solid black;
+    display: block;
+}
+
+.footer{
+    display: flex;
+    align-items: left;
+}
+
+.post{
+    background-color: pink;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;               /* Enable flexbox */
+    justify-content: center;      /* Horizontally center */
+    align-items: center;          /* Vertically center */
+    height: 40px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.Choice{
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.custom-button{
+    width: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.custom-textarea {
+    resize: none;
+    margin-top: 20px;
+    width: 100%; 
+    max-width: 600px;
+    height: 80px;
+    padding: 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    font-size: 20px; 
+    font-family: 'Arial', sans-serif; 
+    outline: none; 
+    transition: border 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.custom-textarea:focus {
+    border-color: #4CAF50; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow on focus */
+}
+
+.custom-textarea::placeholder {
+    color: #aaa; /* Placeholder text color */
+    font-style: italic; /* Placeholder font style */
+}
+
+.custom-file-input {
+    background-color: black;
+    height: 300px;
+    width: 500px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; /* Hide the file input */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.custom-file-input label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-input label:hover {
+    background-color: #0056b3;
+}
+
+#fileName {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.post-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.display-pic {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px; /* Rounded corners */
+    object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+.custom-image {
+    overflow: hidden; /* Hides any overflow */
+    border-radius: 25px; /* Rounded corners for the container */
+    display: flex; /* Center the image if necessary */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.Friends{
+    background-color: white;
+    height: 100vh;
+    width: 60%;
+    /* display: flex; */
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+      overflow-x: hidden;
+  }
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .Friends::-webkit-scrollbar {
+    width: 0; /* Set width to 0 */
+    height: 0; /* Set height to 0 */
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .Friends {
+    scrollbar-width: thin; /* Set a thin scrollbar */
+    scrollbar-color: transparent transparent; /* Set colors to transparent */
+  }

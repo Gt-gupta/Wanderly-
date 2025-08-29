@@ -1,0 +1,18 @@
+.messages::-webkit-scrollbar {
+    width: 0; /* Set width to 0 */
+    height: 0; /* Set height to 0 */
+  }
+  
+  .bottom {
+    position: fixed;
+    bottom: 100px; /* Adjust as needed */
+    right: 100px; /* Adjust as needed */
+    width: 50px; /* Optional: Set a fixed width */
+    height: 50px; /* Optional: Set a fixed height */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: rgba(0, 0, 0, 1); /* Optional: Add a background for visibility */
+    border-radius: 10px; /* Optional: Make it circular */
+    cursor: pointer; /* Change cursor to pointer */
+}

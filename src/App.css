@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+}
+.App::-webkit-scrollbar {
+  width: 0;
+  height: 0; 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Left-side{
+  background-color: white;
+  width: 20%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Page-box{
+  display: flex;
+  padding-left: 5px;
+  height: auto;
+  width: 180px;
+  border-radius: 20px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Page-box img{
+  height: 30px;
+  width: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+}
+.avatar-circle{
+  margin-top: 20px;
+  border-radius: 50%;
+  /* width: 100px;
+  height: 100px; */
+}
+
+.Center{
+  background-color: white;
+  height: 100vh;
+  width: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* overflow-y: auto; */
+}
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.Center::-webkit-scrollbar {
+  width: 0;
+  height: 0; 
+}
+
+/* Hide scrollbar for Firefox */
+.Center {
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+}
+
+.Right-side{
+  background-color: white;
+  width: 20%;
+  height: 100vh;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow: hidden;
+}
+
+.Messages{
+  width: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.Post{
+  width: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.Friends{
+  width: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.search{
+  width: 60%;
+  height: 100%;
+  overflow-y: auto;
+}

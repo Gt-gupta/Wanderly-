@@ -1,0 +1,48 @@
+.signIn {
+    width: 30%;
+    height: 100vh; /* Ensures full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Set the background color */
+}
+
+.image {
+    width: 70%;
+    height: 100vh; /* Ensures the image fills its container */
+    object-fit: cover; /* Covers container without distortion */
+}
+
+.signInButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signInButton:hover {
+    background-color: #0056b3;
+}
+
+.input{
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+.line {
+    width: 80%;         /* Adjusts the width of the line */
+    height: 1px;        /* Adjusts the thickness of the line */
+    background-color: white;
+    margin: 20px 0;     /* Adds spacing around the line */
+}
+

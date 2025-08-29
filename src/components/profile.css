@@ -1,0 +1,28 @@
+.about{
+    width: 20%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts{
+    background-color: white;
+    height: 100vh;
+    width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+      overflow-x: hidden;
+  }
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .posts::-webkit-scrollbar {
+    width: 0; /* Set width to 0 */
+    height: 0; /* Set height to 0 */
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .posts {
+    scrollbar-width: thin; /* Set a thin scrollbar */
+    scrollbar-color: transparent transparent; /* Set colors to transparent */
+  }

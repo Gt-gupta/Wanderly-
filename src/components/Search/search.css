@@ -1,0 +1,13 @@
+.searchBar {
+    height: 50px;
+    width: 80%;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid black; /* Uniform red border */
+    background-color: white; /* Set uniform background */
+    color: black; /* Set text color */
+    outline: none; /* Remove focus outline */
+}

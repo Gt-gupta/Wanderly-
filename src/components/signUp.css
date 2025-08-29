@@ -1,0 +1,84 @@
+/* signUp.css */
+
+.image {
+    width: 70%;
+    height: 100vh; /* Ensures the image fills its container */
+    object-fit: cover; /* Covers container without distortion */
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.signUp p {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #6a67ce;
+}
+
+.signUpButton {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: #6a67ce;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.signUpButton:hover {
+    background-color: #4f46a1;
+}
+
+.line {
+    width: 100%;
+    max-width: 350px;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.google {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
