@@ -103,6 +103,7 @@ exports.resetPassword = async (req, res) => {
 
     try {
         // Verify the token
+        // now
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         // Hash the new password
