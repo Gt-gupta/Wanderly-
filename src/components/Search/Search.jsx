@@ -15,7 +15,7 @@ function Search(){
         const token = localStorage.getItem("token"); // Get the token from localStorage
     
         if (!token) {
-            console.error("User is not authenticated");
+            console.error("User is not authenticated for this action.");
             return;
         }
     
