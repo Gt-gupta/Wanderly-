@@ -22,7 +22,7 @@ function TabBar(upper) {
     return (
         <div className="Choice">
             <CustomButton text="Feed" id={0} /> 
-            <CustomButton text="Poll" id={1} /> 
+            <CustomButton text="Pool" id={1} /> 
         </div>
     );
 }

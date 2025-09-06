@@ -24,28 +24,21 @@ exports.createPost = async (req, res) => {
     }
 };
 
-exports.createPoll = async (req,res) => {
-    const {description , options} = req.body;
+exports.createPool = async (req,res) => {
+    const {location , no , going} = req.body;
     const userId = req.userId;
-    console.log(description);
-    console.log(options);
-    const opt = ["TALK-NULL","TALK-NULL","TALK-NULL","TALK-NULL"];
-    for(let i =0;i<options.length;i++){
-        opt[i] = options[i];
-    }
-    const countQuery = 'SELECT COUNT(*) AS pollCount FROM polls';
+    console.log(location);
+    console.log(no);
+    console.log(going);
     try{
-        const [rows] = await db.execute(countQuery);
-        const pollCount = rows[0].pollCount;
-        const newId = pollCount+1;
         const [result] = await db.execute(
-            'INSERT INTO polls (userId , id, description, opt1 , opt2 , opt3 , opt4, created_at) VALUES (?, ?, ?, ?, ?, ?, ?,NOW())',
-            [userId,newId, description, opt[0] , opt[1] , opt[2] , opt[3]]
+            'INSERT INTO trippool (userId , location , no , going) VALUES (?, ?, ?, ?)',
+            [userId, location , no , going]
         );
-        res.status(201).json({ message: 'Poll created successfully', pollId: result.insertId });    
+        res.status(201).json({ message: 'Pool created successfully', pollId: result.insertId });    
     }catch(err){
         console.error(error);
-        res.status(500).json({ message: 'Error creating poll' });
+        res.status(500).json({ message: 'Error creating pool' });
     }
 };
 
