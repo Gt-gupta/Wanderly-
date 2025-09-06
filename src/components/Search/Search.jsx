@@ -90,6 +90,7 @@ function Search(){
                     user.id === userId ? { ...user, friend: true } : user
                 )
             );
+            //if there is an error in adding in adding the friend it will be caught in the catich block
         } catch (error) {
             console.error("Error adding friend:", error);
         }
