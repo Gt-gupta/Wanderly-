@@ -30,7 +30,7 @@ function Search(){
             setUsers(response.data.data); // Update users state with the fetched data
             console.log(users);
         } catch (err) {
-            console.error("Error fetching users:", err);
+            console.error("Error fetching users:", err); // Log any errors
         }
     };
 
