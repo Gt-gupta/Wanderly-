@@ -1,5 +1,6 @@
 const pages_types = [
     {name:"Feed" , img: "/feeds.png" , chosenImg:"/feeds_white.png"},
+    {name:"TripPool" , img: "/feeds.png" , chosenImg:"/feeds_white.png"},
     {name:"Post" , img: "/post.png", chosenImg:"/post_white.png"},
     {name:"Search" , img: "/search.png", chosenImg:"/searchWhite.png"},
     {name:"Friends" , img: "/friends.png", chosenImg:"/friends_white.png"},

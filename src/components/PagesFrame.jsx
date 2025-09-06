@@ -11,7 +11,7 @@ function PagesFrame(props) {
     }
     return (
         <div 
-            onClick={() => {props.selectIndex(props.index) ; props.update(props.index); props.index===4&&handleButtonClick() ;}} 
+            onClick={() => {props.selectIndex(props.index) ; props.update(props.index); props.index===5&&handleButtonClick() ;}} 
             className="Page-box" 
             style={{ backgroundColor: props.chosenIndex === props.index ? "black" : "white" , cursor:"pointer" }}
         >

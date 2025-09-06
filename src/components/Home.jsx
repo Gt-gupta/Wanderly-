@@ -5,6 +5,7 @@ import RightSide from './RightSide';
 import Post from './Post/Post';
 import Friends from './Friends/Friends';
 import Search from "./Search/Search";
+import TripPool from "./TripPool/pool";
 import { useSearchParams } from 'react-router-dom';
 import "../App.css";
 import axios from "axios";
@@ -45,9 +46,10 @@ function Home() {
         <div className="App">
             <LeftSide update={update} name={name} />
             {chosenIndex === 0 && <Center />}
-            {chosenIndex === 1 && <Post />}
-            {chosenIndex === 2 && <Search />}
-            {chosenIndex === 3 && <Friends />}
+            {chosenIndex === 1 && <TripPool />}
+            {chosenIndex === 2 && <Post />}
+            {chosenIndex === 3 && <Search />}
+            {chosenIndex === 4 && <Friends />}
             <RightSide topPosts={topPosts} />
         </div>
     );

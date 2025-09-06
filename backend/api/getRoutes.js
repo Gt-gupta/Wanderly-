@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multerconfig'); // Import multer config for file upload
-const {getPosts , getFriends , getUsers , getPolls,getChatId , getChat,getProfilePosts, getTopPosts} = require('../controllers/getController');
+const {getPosts , getFriends , getTripPools , getUsers , getPolls,getChatId , getChat,getProfilePosts, getTopPosts} = require('../controllers/getController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // Define the route for creating a post
@@ -13,4 +13,5 @@ router.get('/getChatId',authMiddleware,getChatId);
 router.get('/getChat',authMiddleware,getChat);
 router.get('/getProfilePosts',authMiddleware,getProfilePosts);
 router.get('/getTopPosts',authMiddleware,getTopPosts);
+router.get('/getTripPools',authMiddleware,getTripPools);
 module.exports = router;

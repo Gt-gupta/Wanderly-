@@ -49,6 +49,55 @@ exports.getPosts = async (req, res) => {
     }
 };
 
+exports.getTripPools = async (req, res) => {
+  const page = parseInt(req.query.page, 10) || 1;
+  const limit = 10;
+  const offset = (page - 1) * limit;
+
+  try {
+    console.log("Fetching trip pools...");
+    const [countRows] = await db.execute(
+      'SELECT COUNT(*) AS total FROM trippool'
+    );
+    const totalItems = countRows?.[0]?.total || 0;
+
+    const listQuery = `
+      SELECT
+        tp.id,
+        u.username,
+        tp.location,
+        tp.no,
+        tp.going
+      FROM trippool tp
+      INNER JOIN users u ON u.id = tp.userId
+      ORDER BY tp.going ASC, tp.id DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `;
+
+    const [rows] = await db.execute(listQuery);
+
+    return res.status(200).json({
+      success: true,
+      message: 'Trip pools retrieved successfully',
+      data: rows,
+      metadata: {
+        page,
+        limit,
+        totalItems,
+        totalPages: Math.ceil(totalItems / limit),
+      },
+    });
+  } catch (err) {
+    console.error('Error fetching trip pools:', err);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to fetch trip pools',
+      error: err.message,
+    });
+  }
+};
+
+
 exports.getPolls = async (req, res) => {
     const userId = req.userId; // Current user ID from middleware
     const page = parseInt(req.query.page, 10) || 1; // Default to page 1 if not provided
